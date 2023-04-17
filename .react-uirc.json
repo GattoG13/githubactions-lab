@@ -1,5 +1,0 @@
-{
-  "eject": true,
-  "eject-path": "./src/components",
-  "components": ["BaseButton", "BaseLink", "BaseImage"]
-}
