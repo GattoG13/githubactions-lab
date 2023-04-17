@@ -9,31 +9,21 @@ on:
       CI_ENV:
         required: true
         type: string
-      GTM_ID:
-        required: true
-        type: string
-      GTM_PARAMS:
-        required: true
-        type: string
       CONTENTFUL_ENVIRONMENT:
         required: true
         type: string
     secrets:
-      CONTENTFUL_SPACE_ID:
-        required: true
-      CONTENTFUL_DELIVERY_API_ACCESS_TOKEN:
-        required: true
       AWS_ACCESS_KEY_ID:
         required: true
       AWS_SECRET_ACCESS_KEY:
         required: true
       AWS_DEFAULT_REGION:
         required: true
+      AWS_SESSION_TOKEN:
+        required: true
       WEBSITE_SITE_URL:
         required: true
       S3_ORIGIN_BUCKET:
-        required: true
-      CLOUDFRONT_DISTRIBUTION_ID:
         required: true
 
 jobs:
