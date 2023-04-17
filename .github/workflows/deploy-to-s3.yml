@@ -21,8 +21,6 @@ on:
         required: true
       AWS_SESSION_TOKEN:
         required: true
-      WEBSITE_SITE_URL:
-        required: true
       S3_ORIGIN_BUCKET:
         required: true
 
@@ -62,7 +60,6 @@ jobs:
         shell: bash
         env:
           CI_ENV: ${{ inputs.CI_ENV }}
-          WEBSITE_SITE_URL: ${{ secrets.WEBSITE_SITE_URL }}
           CONTENTFUL_ENVIRONMENT: ${{ inputs.CONTENTFUL_ENVIRONMENT }}
           S3_ORIGIN_BUCKET: ${{ secrets.S3_ORIGIN_BUCKET }}
 
