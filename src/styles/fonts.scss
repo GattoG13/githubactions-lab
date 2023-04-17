@@ -1,0 +1,52 @@
+// Fonts
+//
+// Location of all the font-families and font-related css
+//
+// Best practices:
+// 1. Avoid loading as many fonts as possible, e.x font styles, font families
+// 2. Optimize the font, remove the characters set that the site won't use: languages
+// 3. Include the unicode range in case you couldn't remove the characters. Included just Latin by default
+// 4. Change fonts by just changing the font-weight
+
+/* Fonts Map:
+- 100 - Thin
+- 200 - Extra-light
+- 300 - Light
+- 400 - Normal
+- 500 - Medium
+- 600 - Semi-bold
+- 700 - Bold
+- 800 - Extra-bold
+- 900 - Black
+
+// NOTE: All fonts have italic variants too
+*/
+
+@import 'vars';
+
+@font-face {
+  font-family: 'Toyota Type Book';
+  src: url('~@/assets/fonts/ToyotaType/ToyotaType-Book.woff2') format('woff2'),
+    url('~@/assets/fonts/ToyotaType/ToyotaType-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Toyota Type';
+  src: url('~@/assets/fonts/ToyotaType/ToyotaType-Regular.woff2') format('woff2'),
+    url('~@/assets/fonts/ToyotaType/ToyotaType-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Toyota Type Light';
+  src: url('~@/assets/fonts/ToyotaType/ToyotaType-Light.woff2') format('woff2'),
+    url('~@/assets/fonts/ToyotaType/ToyotaType-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

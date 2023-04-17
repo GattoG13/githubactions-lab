@@ -1,0 +1,49 @@
+@import 'shared';
+
+.root {
+  width: 100%;
+  @include outer-container(true);
+  text-align: left;
+  overflow: hidden;
+  position: relative;
+  @include rounded(px(43), false);
+
+  .wrapper {
+    @include box(100%);
+    @include container;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    padding: px(20) 0;
+    @include media-tablet {
+      padding: px(20) 0 px(34);
+    }
+
+    @include media-desktopMd {
+      padding: px(43) 0 px(100);
+    }
+  }
+
+  &.dark {
+    color: $white;
+  }
+
+  &.light {
+    color: $dark-grey;
+  }
+
+  @include eyebrowTitle;
+
+  .wrapperInfo {
+    width: 100%;
+    @include outer-container;
+  }
+
+  .content {
+    height: 100%;
+    z-index: 2;
+    position: relative;
+    @include container;
+    @include flex-center-horiz;
+  }
+}
