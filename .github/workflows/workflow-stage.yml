@@ -14,19 +14,15 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-stage:
-    uses: woven-planet/woven-website/.github/workflows/deploy-to-s3.yml@staging
+  build-dev:
+    uses: woven-planet/woven-website/.github/workflows/deploy-to-s3.yml@develop
     with:
-      CI_ENV: staging
-      GTM_ID: GTM-0000000 # TODO: update
-      GTM_PARAMS: '' # TODO: update
-      CONTENTFUL_ENVIRONMENT: 'staging'
+      CI_ENV: develop
+      CONTENTFUL_ENVIRONMENT: 'develop'
     secrets:
-      WEBSITE_SITE_URL: ${{ secrets.WEBSITE_SITE_URL_STAGE }}
-      CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID_STAGE }}
-      CONTENTFUL_DELIVERY_API_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_API_ACCESS_TOKEN_STAGE }}
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_STAGE }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_STAGE }}
+      WEBSITE_SITE_URL: ${{ secrets.WEBSITE_SITE_URL_DEV }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_DEV }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_DEV }}
+      AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN}}
       AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
-      S3_ORIGIN_BUCKET: ${{ secrets.S3_ORIGIN_BUCKET_STAGE }}
-      CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID_STAGE }}
+      S3_ORIGIN_BUCKET: ${{ secrets.S3_ORIGIN_BUCKET_DEV }}
